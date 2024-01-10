@@ -28,6 +28,7 @@ SRC_URI = "https://www.kernel.org/pub/linux/kernel/v5.x/linux-${PV}.tar.xz \
 	file://0003-dts-allwinner-bananapi-m2-zreo-Enforce-consistent-MM.patch \
 	file://0004-i2c-mv64xxx-Add-atomic_xfer-method-to-driver.patch \
 	file://0005-i2c-mv64xxx-Remove-shutdown-method-from-driver.patch \
+	file://0006-orangepi-pc-plus-Added-mmc-aliases-to-have-consisten.patch \
 	file://defconfig \
 "
 

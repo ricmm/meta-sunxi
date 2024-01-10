@@ -1,0 +1,30 @@
+From 60ffeb194d08817efab0467e2b2d7eff502f3276 Mon Sep 17 00:00:00 2001
+From: Marek Belisko <marek.belisko@open-nandra.com>
+Date: Wed, 10 Jan 2024 08:37:32 +0100
+Subject: [PATCH] orangepi-pc-plus: Added mmc aliases to have consistent
+ devices
+
+It fix random issues with boot problem.
+
+Signed-off-by: Marek Belisko <marek.belisko@open-nandra.com>
+---
+ arch/arm/boot/dts/sun8i-h3-orangepi-pc-plus.dts | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/arch/arm/boot/dts/sun8i-h3-orangepi-pc-plus.dts b/arch/arm/boot/dts/sun8i-h3-orangepi-pc-plus.dts
+index babf4cf1b..8c9bd76f5 100644
+--- a/arch/arm/boot/dts/sun8i-h3-orangepi-pc-plus.dts
++++ b/arch/arm/boot/dts/sun8i-h3-orangepi-pc-plus.dts
+@@ -50,6 +50,9 @@ / {
+ 	aliases {
+ 		/* ethernet0 is the H3 emac, defined in sun8i-h3.dtsi */
+ 		ethernet1 = &rtl8189ftv;
++		mmc0 = &mmc0;
++		mmc1 = &mmc1;
++		mmc2 = &mmc2;
+ 	};
+ };
+ 
+-- 
+2.25.1
+
