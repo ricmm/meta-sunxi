@@ -16,6 +16,8 @@ SRC_URI:append:sunxi = " \
 	file://0002-Added-nanopi-r1-board-support.patch \
 	file://0003-Add-nanopi-duo2-board-support.patch \
 	file://0004-i2c-mvtwsi-Add-compatible-string-for-allwinner-sun4i.patch \
+	file://0005-Added-dtb-for-sun8i-h3-nanopi-r1-device.patch \
+	file://0006-nanopi-r1-dts-fixes.patch \
         file://boot.cmd \
 "
 

@@ -1,0 +1,35 @@
+From 08aab303e36a3da19d49f111e5f2ad7d85b642fd Mon Sep 17 00:00:00 2001
+From: Marek Belisko <marek.belisko@gmail.com>
+Date: Wed, 24 Apr 2024 15:32:12 +0200
+Subject: [PATCH] nanopi-r1: dts fixes
+
+Signed-off-by: Marek Belisko <marek.belisko@gmail.com>
+---
+ arch/arm/dts/sun8i-h3-nanopi-r1.dts | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/arch/arm/dts/sun8i-h3-nanopi-r1.dts b/arch/arm/dts/sun8i-h3-nanopi-r1.dts
+index 42cd1131ad..26e2e6172e 100644
+--- a/arch/arm/dts/sun8i-h3-nanopi-r1.dts
++++ b/arch/arm/dts/sun8i-h3-nanopi-r1.dts
+@@ -46,7 +46,7 @@
+ 	wifi_pwrseq: wifi_pwrseq {
+ 		compatible = "mmc-pwrseq-simple";
+ 		reset-gpios = <&r_pio 0 7 GPIO_ACTIVE_LOW>; /* PL7 */
+-		clocks = <&rtc CLK_OSC32K_FANOUT>;
++		clocks = <&rtc 1>;
+ 		clock-names = "ext_clock";
+ 	};
+ 
+@@ -147,7 +147,7 @@
+ 
+ 	bluetooth {
+ 		compatible = "brcm,bcm43438-bt";
+-		clocks = <&rtc CLK_OSC32K_FANOUT>;
++		clocks = <&rtc 1>;
+ 		clock-names = "lpo";
+ 		vbat-supply = <&reg_vcc3v3>;
+ 		vddio-supply = <&reg_vcc3v3>;
+-- 
+2.25.1
+
