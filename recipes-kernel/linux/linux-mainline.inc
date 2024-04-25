@@ -7,6 +7,8 @@ inherit kernel
 
 require linux.inc
 
+LINUX_VERSION = "${PV}"
+
 KERNEL_DTB_PREFIX = "0"
 
 python() {
