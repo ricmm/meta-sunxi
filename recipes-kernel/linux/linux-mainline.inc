@@ -7,6 +7,8 @@ inherit kernel
 
 require linux.inc
 
+LINUX_VERSION = "${PV}"
+
 # Since we're not using git, this doesn't make a difference, but we need to fill
 # in something or kernel-yocto.bbclass will fail.
 KBRANCH ?= "master"
