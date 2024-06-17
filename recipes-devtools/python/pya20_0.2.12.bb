@@ -16,7 +16,7 @@ S = "${WORKDIR}/pyA20-${PV}"
 inherit distutils3
 
 do_compile:prepend() { 
-cp ${WORKDIR}/mapping.h ${S}/pyA20/gpio/mapping.h
+    cp ${UNPACKDIR}/mapping.h ${S}/pyA20/gpio/mapping.h
 }
 
 SRC_URI[md5sum] = "cab03b4931199804603d1074f6d8f48f"
